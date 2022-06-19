@@ -1,10 +1,10 @@
 # WA Easy API Node SDK
 
-[![npm](https://img.shields.io/npm/v/razorpay.svg?maxAge=2592000?style=flat-square)](https://www.npmjs.com/package/waeasyapi)
+[![npm](https://img.shields.io/npm/v/waeasyapi.svg?maxAge=2592000?style=flat-square)](https://www.npmjs.com/package/waeasyapi)
 
 Official nodejs library for [WA Easy API](https://waeasyapi.com/).
 
-Read up here for getting started and understanding messages flow with Razorpay: <https://docs.waeasyapi.com/>
+Read up here for getting started and understanding messages flow with WA Easy API: <https://docs.waeasyapi.com/>
 
 ## Installation
 
