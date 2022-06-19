@@ -68,17 +68,25 @@ waInstance.sendMessage(number, message),
 );
 ```
 
-### Basic Usage
-
-Instantiate the waeasyapi instance with `acc_id` & `acc_secret`. You can obtain the keys from the dashboard app ([https://app.waeasyapi.com/](https://app.waeasyapi.com/))
+### Typescript or ESNext
 
 ```js
-const WAEasyAPI = require('waeasyapi');
+import WAEasyAPI from 'waeasyapi';
 
 const waInstance = new WAEasyAPI({
   acc_id: 'YOUR_ACC_ID',
   acc_secret: 'YOUR_ACC_SECRET',
 });
+
+waInstance.sendMessage(number, message),
+  (error, response) => {
+    if (error) {
+      // handle error
+    } else {
+      // handle success
+    }
+  }
+);
 ```
 
 ## Licence
