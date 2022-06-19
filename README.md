@@ -73,7 +73,26 @@ waInstance.sendMessage(number, message),
 );
 ```
 
-#### Typescript or ESNext
+#### Example - Node.js
+
+```js
+const WAEasyAPI = require('waeasyapi');
+
+const waInstance = new WAEasyAPI({
+  acc_id: 'YOUR_ACC_ID',
+  acc_secret: 'YOUR_ACC_SECRET',
+});
+
+waInstance.sendMessage('158883993', 'Hello WhatsApp!')
+  .then(response => {
+    // handle success
+  })
+  .catch(error => {
+    // handle error
+  });
+```
+
+#### Example - Typescript or ESNext
 
 ```js
 import WAEasyAPI from 'waeasyapi';
@@ -83,7 +102,7 @@ const waInstance = new WAEasyAPI({
   acc_secret: 'YOUR_ACC_SECRET',
 });
 
-waInstance.sendMessage(number, message),
+waInstance.sendMessage('158883993', 'Hello WhatsApp!'),
   (error, response) => {
     if (error) {
       // handle error
