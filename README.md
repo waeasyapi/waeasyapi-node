@@ -33,6 +33,7 @@ Available methods:
 
 ```js
 // number must start with the country's dialing code
+
 // example - For USA: 158883993
 // example - For India: 919876543210
 
