@@ -1,0 +1,23 @@
+{
+  "name": "waeasyapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/waeasyapi/waeasyapi-node.git"
+  },
+  "keywords": [
+    "waeasyapi",
+    "whatsapp",
+    "whatsapp-api",
+    "node",
+    "nodejs",
+    "waeasyapi-node"
+  ]
+}
