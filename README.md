@@ -68,6 +68,19 @@ waInstance.sendMessage(number, message),
 );
 ```
 
+### Basic Usage
+
+Instantiate the waeasyapi instance with `acc_id` & `acc_secret`. You can obtain the keys from the dashboard app ([https://app.waeasyapi.com/](https://app.waeasyapi.com/))
+
+```js
+const WAEasyAPI = require('waeasyapi');
+
+const waInstance = new WAEasyAPI({
+  acc_id: 'YOUR_ACC_ID',
+  acc_secret: 'YOUR_ACC_SECRET',
+});
+```
+
 ## Licence
 
 MIT Licensed. See [LICENSE.txt](LICENSE.txt) for more details
