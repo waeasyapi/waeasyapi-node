@@ -23,7 +23,7 @@ Instantiate the waeasyapi instance with `acc_id` & `acc_secret`. You can obtain 
 ```js
 const WAEasyAPI = require('waeasyapi');
 
-var waInstance = new WAEasyAPI({
+const waInstance = new WAEasyAPI({
   acc_id: 'YOUR_ACC_ID',
   acc_secret: 'YOUR_ACC_SECRET',
 });
