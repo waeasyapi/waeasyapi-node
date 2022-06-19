@@ -44,6 +44,10 @@ waInstance.sendMedia(number, template, params);
 
 Every resource method returns a promise.
 
+//number must start with the country's dialing code
+//Example - For USA: 158883993
+//Example - For India: 919876543210
+
 ```js
 waInstance.sendMessage(number, message)
   .then(response => {
