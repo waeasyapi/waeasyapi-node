@@ -5,9 +5,9 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var request = require('request-promise');
-var nodeify = require('./nodeify');
+var nodeify = require('./lib/nodeify');
 
-var _require = require('./utils'),
+var _require = require('./lib/utils'),
     isNonNullObject = _require.isNonNullObject;
 
 var allowedHeaders = {
