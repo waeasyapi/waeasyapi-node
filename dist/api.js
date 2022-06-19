@@ -50,8 +50,8 @@ var API = function () {
       baseUrl: options.hostUrl,
       json: true,
       auth: {
-        user: options.key_id,
-        pass: options.key_secret
+        user: options.acc_id,
+        pass: options.acc_secret
       },
       headers: Object.assign({ 'User-Agent': options.ua }, getValidHeaders(options.headers))
     });

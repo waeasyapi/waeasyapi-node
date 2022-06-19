@@ -15,9 +15,9 @@ var WAEasyAPI = function () {
 
     _classCallCheck(this, WAEasyAPI);
 
-    var acc_id = options.acc_id,
-    acc_secret = options.acc_secret,
-        headers = options.headers;
+    const acc_id = options.acc_id;
+    const acc_secret = options.acc_secret;
+    const headers = options.headers;
 
     
     console.log('acc_id: ', acc_id);
@@ -27,7 +27,7 @@ var WAEasyAPI = function () {
     if (!acc_secret) throw new Error('`acc_secret` is mandatory');
 
     this.acc_id = acc_id;
-    this.key_secret = key_secret;
+    this.acc_secret = acc_secret;
 
     this.api = new API({
       hostUrl: 'https://api.waeasyapi.com/v1/',
