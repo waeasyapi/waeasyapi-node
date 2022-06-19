@@ -32,6 +32,10 @@ const waInstance = new WAEasyAPI({
 Available methods:
 
 ```js
+// number must start with the country's dialing code
+// example - For USA: 158883993
+// example - For India: 919876543210
+
 // example - send a text message
 waInstance.sendMessage(number, message);
 
@@ -43,10 +47,6 @@ waInstance.sendMedia(number, template, params);
 ```
 
 Every resource method returns a promise.
-
-//number must start with the country's dialing code
-//Example - For USA: 158883993
-//Example - For India: 919876543210
 
 ```js
 waInstance.sendMessage(number, message)
