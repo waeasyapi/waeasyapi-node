@@ -76,6 +76,8 @@ waInstance.sendMessage(number, message),
 #### Example - Node.js
 
 ```js
+// number must start with the country's dialing code
+
 const WAEasyAPI = require('waeasyapi');
 
 const waInstance = new WAEasyAPI({
@@ -95,6 +97,8 @@ waInstance.sendMessage('158883993', 'Hello WhatsApp!')
 #### Example - Typescript or ESNext
 
 ```js
+// number must start with the country's dialing code
+
 import WAEasyAPI from 'waeasyapi';
 
 const waInstance = new WAEasyAPI({
