@@ -68,7 +68,7 @@ waInstance.sendMessage(number, message),
 );
 ```
 
-## Typescript or ESNext
+#### Typescript or ESNext
 
 ```js
 import WAEasyAPI from 'waeasyapi';
