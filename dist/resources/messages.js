@@ -8,13 +8,15 @@ const TEMPLATE_REQUIRED_MSG = '`template` is mandatory';
 module.exports = function (api) {
   return {
     sendMessage: function sendMessage(number, message, callback) {
-      if (!number) return Promise.reject(NUMBER_REQUIRED_MSG);
-      if (!message) return Promise.reject(MESSAGE_REQUIRED_MSG);
+      if (!number) throw new Error(NUMBER_REQUIRED_MSG);
+      if (!message) throw new Error(MESSAGE_REQUIRED_MSG);
 
       const payload = {
         number: number,
         message: message
       };
+
+      console.log('sendinMessage: ', payload);
 
       return api.post({
         url: '/send/message',
@@ -22,14 +24,16 @@ module.exports = function (api) {
       }, callback);
     },
     sendTemplate: function sendTemplate(number, template, params, callback) {
-      if (!number) return Promise.reject(NUMBER_REQUIRED_MSG);
-      if (!template) return Promise.reject(TEMPLATE_REQUIRED_MSG);
+      if (!number) throw new Error(NUMBER_REQUIRED_MSG);
+      if (!template) throw new Error(TEMPLATE_REQUIRED_MSG);
 
       const payload = {
         number: number,
         template: template,
         params: params
       };
+
+      console.log('sendTemplate: ', payload);
 
       return api.post({
         url: '/send/template',
@@ -37,14 +41,16 @@ module.exports = function (api) {
       }, callback);
     },
     sendMedia: function sendTemplate(number, template, params, callback) {
-      if (!number) return Promise.reject(NUMBER_REQUIRED_MSG);
-      if (!template) return Promise.reject(TEMPLATE_REQUIRED_MSG);
+      if (!number) throw new Error(NUMBER_REQUIRED_MSG);
+      if (!template) throw new Error(TEMPLATE_REQUIRED_MSG);
 
       const payload = {
         number: number,
         template: template,
         params: params
       };
+
+      console.log('sendMedia: ', payload);
 
       return api.post({
         url: '/send/media',
