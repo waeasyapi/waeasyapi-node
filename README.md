@@ -44,6 +44,7 @@ waInstance.sendMessage(number, message);
 waInstance.sendTemplate(number, template, params);
 
 // example - send an approved WhatsApp media template
+
 // media = media-url-or-media-blob
 waInstance.sendMedia(number, template, media, params);
 ```
