@@ -44,7 +44,8 @@ waInstance.sendMessage(number, message);
 waInstance.sendTemplate(number, template, params);
 
 // example - send an approved WhatsApp media template
-waInstance.sendMedia(number, template, params);
+// media = media-url-or-media-blob
+waInstance.sendMedia(number, template, media, params);
 ```
 
 Every resource method returns a promise.

@@ -16,8 +16,6 @@ module.exports = function (api) {
         message: message
       };
 
-      console.log('sendinMessage: ', payload);
-
       return api.post({
         url: '/send/message',
         data: payload
@@ -33,24 +31,21 @@ module.exports = function (api) {
         params: params
       };
 
-      console.log('sendTemplate: ', payload);
-
       return api.post({
         url: '/send/template',
         data: payload
       }, callback);
     },
-    sendMedia: function sendTemplate(number, template, params, callback) {
+    sendMedia: function sendTemplate(number, template, media, params, callback) {
       if (!number) throw new Error(NUMBER_REQUIRED_MSG);
       if (!template) throw new Error(TEMPLATE_REQUIRED_MSG);
 
       const payload = {
         number: number,
         template: template,
+        media: media,
         params: params
       };
-
-      console.log('sendMedia: ', payload);
 
       return api.post({
         url: '/send/media',
