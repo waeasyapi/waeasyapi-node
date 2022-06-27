@@ -171,7 +171,7 @@ const waInstance = new WAEasyAPI({
   acc_secret: 'YOUR_ACC_SECRET',
 });
 
-waInstance.sendTextMessage('19876543210', 'Hello WhatsApp!')
+waInstance.sendTextMessage('19876543210', 'Hello WA Easy API!')
   .then(response => {
     // handle success
   })
@@ -192,7 +192,7 @@ const waInstance = new WAEasyAPI({
   acc_secret: 'YOUR_ACC_SECRET',
 });
 
-waInstance.sendTextMessage('19876543210', 'Hello WhatsApp!'),
+waInstance.sendTextMessage('19876543210', 'Hello WA Easy API!'),
   (error, response) => {
     if (error) {
       // handle error
