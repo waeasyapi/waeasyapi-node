@@ -89,7 +89,9 @@ waInstance.sendVideoMessage(number, params);
 // eg - send a document message via an http / https url
 const params = { link: `your_document_link` };
 waInstance.sendDocumentMessage(number, params);
+```
 
+```js
 // eg - send a location message 
 const params = {
   longitude: -122.425332, // required
@@ -98,7 +100,9 @@ const params = {
   address: "1 Hacker Way, Menlo Park, CA 94025" // optional
 };
 waInstance.sendLocationMessage(number, params);
+```
 
+```js
 // eg - send a contact message
 const params = [
   {
@@ -115,8 +119,17 @@ const params = [
   }
 ];
 waInstance.sendContactMessage(number, params);
+```
 
+```js
 // eg - send a contact message 
+const params = {
+  type: 'list', // type = list OR button
+  header: {},
+  body: {},
+  footer: {},
+  action: {}
+};
 waInstance.sendInteractiveMessage(number, params);
 ```
 
