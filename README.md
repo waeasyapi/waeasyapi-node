@@ -38,30 +38,77 @@ Available methods:
 // example - For India: 919876543210
 
 // example - send a text message
+const message = 'Hello from WA Easy API';
 waInstance.sendTextMessage(number, message);
 
 // example - send an approved WhatsApp template
+const template = 'approved_template_name';
+
+// if there are variables in the template
+// eg: "Your order {{1}} for a total of {{2}} is confirmed. The expected delivery is {{3}}."
+const params = {
+  language: {
+      code: 'en',
+      policy: 'deterministic'
+  },
+  components: [{
+    type: 'body',
+    parameters: [
+      { type: 'text', text: 'ORDER_ID_199' }, // for {{1}}
+      { type: 'text', text: 'USD 199.00' }, // {{2}}
+      { type: 'text', text: 'today' } // {{3}}
+    ]
+  }]
+}
+
+// if there are no variables in the template 
+// and it's english template, you can keep params = {}
+
 waInstance.sendTemplateMessage(number, template, params);
 
 // example - send a url message with preview
 waInstance.sendURLMessage(number, url);
 
 // example - send an image message via an http / https url
+const params = { link: `your_image_link` };
 waInstance.sendImageMessage(number, params);
 
 // example - send an audio message via an http / https url
-waInstance.sendImageMessage(number, params);
+const params = { link: `your_audio_link` };
+waInstance.sendAudioMessage(number, params);
 
 // example - send a video message via an http / https url
+const params = { link: `your_video_link` };
 waInstance.sendVideoMessage(number, params);
 
 // example - send a document message via an http / https url
+const params = { link: `your_document_link` };
 waInstance.sendDocumentMessage(number, params);
 
 // example - send a location message 
+const params = {
+  longitude: -122.425332, // required
+  latitude: 37.758056, // required
+  name: 'Facebook HQ', // optional
+  address: "1 Hacker Way, Menlo Park, CA 94025" // optional
+};
 waInstance.sendLocationMessage(number, params);
 
 // example - send a contact message
+const params = [
+  {
+    formatted_name: 'Robin White', // required
+    first_name: 'Robin', // optional
+    last_name: 'White', // optional
+
+    phones: [{ 
+      phone: '+18787878787', // required
+      wa_id: '8787878787' // optional
+    }],
+
+    emails: [{ email: 'team@waeasyapi.com' }] // optional
+  }
+];
 waInstance.sendContactMessage(number, params);
 
 // example - send a contact message 
