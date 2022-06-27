@@ -123,12 +123,55 @@ waInstance.sendContactMessage(number, params);
 
 ```js
 // eg - send a interactive message 
+// const params = {
+//   type: 'list', // type = list OR button
+//   header: {},
+//   body: {},
+//   footer: {},
+//   action: {}
+// };
+
 const params = {
-  type: 'list', // type = list OR button
-  header: {},
-  body: {},
-  footer: {},
-  action: {}
+  type: 'list',
+  header: {
+    type: 'text',
+    text: 'WA Easy API - Get Started'
+  },
+  body: {
+    text: "WA Easy API is an official WhatsApp Business API and Messagin Platform."
+  },
+  footer: {
+    text: "Thanks for choosing us."
+  },
+  action: {
+    button: "Continue",
+    sections:[
+      {
+        rows: [
+          {
+            id: "waeasyapi-basic-monthly",
+            title: "WA Easy API - Basic I",
+            description: "Best for developers ($49/monthly)",           
+          },
+          {
+            id: "waeasyapi-premium-monthly",
+            title: "WA Easy API - Premium I",
+            description: "Best for developers and businesses both ($99/monthly)",           
+          },
+          {
+            id: "waeasyapi-basic-yearly",
+            title: "WA Easy API - Basic II",
+            description: "Best for developers ($499/yearly)",           
+          },
+          {
+            id: "waeasyapi-premium-yearly",
+            title: "WA Easy API - Premium II",
+            description: "Best for developers and businesses both ($899/yearly)",           
+          }
+        ]
+      }
+    ]
+  }
 };
 waInstance.sendInteractiveMessage(number, params);
 ```
