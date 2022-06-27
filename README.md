@@ -63,14 +63,14 @@ const params = {
     ]
   }]
 }
-```
 
-```js
 // if there are no variables in the template 
 // and it's english template, you can keep params = {}
 
 waInstance.sendTemplateMessage(number, template, params);
+```
 
+```js
 // example - send a url message with preview
 waInstance.sendURLMessage(number, url);
 
