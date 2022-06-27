@@ -4,6 +4,8 @@
 
 Official nodejs library for [WA Easy API](https://waeasyapi.com/).
 
+## PS: For early access, please write to team@waeasyapi.com
+
 Read up here for getting started and understanding messages flow with WA Easy API: <https://docs.waeasyapi.com/>
 
 ## Installation
