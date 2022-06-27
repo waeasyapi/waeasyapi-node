@@ -122,7 +122,7 @@ waInstance.sendContactMessage(number, params);
 ```
 
 ```js
-// eg - send a contact message 
+// eg - send a interactive message 
 const params = {
   type: 'list', // type = list OR button
   header: {},
