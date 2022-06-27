@@ -38,21 +38,40 @@ Available methods:
 // example - For India: 919876543210
 
 // example - send a text message
-waInstance.sendMessage(number, message);
+waInstance.sendTextMessage(number, message);
 
 // example - send an approved WhatsApp template
-waInstance.sendTemplate(number, template, params);
+waInstance.sendTemplateMessage(number, template, params);
 
-// example - send an approved WhatsApp media template
+// example - send a url message with preview
+waInstance.sendURLMessage(number, url);
 
-// media = media-url-or-media-blob
-waInstance.sendMedia(number, template, media, params);
+// example - send an image message via an http / https url
+waInstance.sendImageMessage(number, params);
+
+// example - send an audio message via an http / https url
+waInstance.sendImageMessage(number, params);
+
+// example - send a video message via an http / https url
+waInstance.sendVideoMessage(number, params);
+
+// example - send a document message via an http / https url
+waInstance.sendDocumentMessage(number, params);
+
+// example - send a location message 
+waInstance.sendLocationMessage(number, params);
+
+// example - send a contact message
+waInstance.sendContactMessage(number, params);
+
+// example - send a contact message 
+waInstance.sendInteractiveMessage(number, params);
 ```
 
 Every resource method returns a promise.
 
 ```js
-waInstance.sendMessage(number, message)
+waInstance.sendTextMessage(number, message)
   .then(response => {
     // handle success
   })
@@ -64,7 +83,7 @@ waInstance.sendMessage(number, message)
 If you want to use callbacks instead of promises, every resource method will accept a callback function as a last parameter. The callback functions will behave as [Error First Callbacks ](http://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/)
 
 ```js
-waInstance.sendMessage(number, message),
+waInstance.sendTextMessage(number, message),
   (error, response) => {
     if (error) {
       // handle error
@@ -87,7 +106,7 @@ const waInstance = new WAEasyAPI({
   acc_secret: 'YOUR_ACC_SECRET',
 });
 
-waInstance.sendMessage('19876543210', 'Hello WhatsApp!')
+waInstance.sendTextMessage('19876543210', 'Hello WhatsApp!')
   .then(response => {
     // handle success
   })
@@ -108,7 +127,7 @@ const waInstance = new WAEasyAPI({
   acc_secret: 'YOUR_ACC_SECRET',
 });
 
-waInstance.sendMessage('19876543210', 'Hello WhatsApp!'),
+waInstance.sendTextMessage('19876543210', 'Hello WhatsApp!'),
   (error, response) => {
     if (error) {
       // handle error

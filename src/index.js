@@ -19,10 +19,6 @@ var WAEasyAPI = function () {
     const acc_secret = options.acc_secret;
     const headers = options.headers;
 
-    
-    console.log('acc_id: ', acc_id);
-    console.log('acc_secret: ', acc_secret);
-
     if (!acc_id) throw new Error('`acc_id` is mandatory');
     if (!acc_secret) throw new Error('`acc_secret` is mandatory');
 
