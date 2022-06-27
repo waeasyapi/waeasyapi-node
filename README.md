@@ -34,17 +34,17 @@ Available methods:
 ```js
 // number must start with the country's dialing code
 
-// example - For USA: 158883993
-// example - For India: 919876543210
+// eg - For USA: 158883993
+// eg - For India: 919876543210
 
-// example - send a text message
+// eg - send a text message
 const message = 'Hello from WA Easy API';
 waInstance.sendTextMessage(number, message);
 
 ```
 
 ```js
-// example - send an approved WhatsApp template
+// eg - send an approved WhatsApp template
 const template = 'approved_template_name';
 
 // if there are variables in the template
@@ -71,26 +71,26 @@ waInstance.sendTemplateMessage(number, template, params);
 ```
 
 ```js
-// example - send a url message with preview
+// eg - send a url message with preview
 waInstance.sendURLMessage(number, url);
 
-// example - send an image message via an http / https url
+// eg - send an image message via an http / https url
 const params = { link: `your_image_link` };
 waInstance.sendImageMessage(number, params);
 
-// example - send an audio message via an http / https url
+// eg - send an audio message via an http / https url
 const params = { link: `your_audio_link` };
 waInstance.sendAudioMessage(number, params);
 
-// example - send a video message via an http / https url
+// eg - send a video message via an http / https url
 const params = { link: `your_video_link` };
 waInstance.sendVideoMessage(number, params);
 
-// example - send a document message via an http / https url
+// eg - send a document message via an http / https url
 const params = { link: `your_document_link` };
 waInstance.sendDocumentMessage(number, params);
 
-// example - send a location message 
+// eg - send a location message 
 const params = {
   longitude: -122.425332, // required
   latitude: 37.758056, // required
@@ -99,7 +99,7 @@ const params = {
 };
 waInstance.sendLocationMessage(number, params);
 
-// example - send a contact message
+// eg - send a contact message
 const params = [
   {
     formatted_name: 'Robin White', // required
@@ -116,7 +116,7 @@ const params = [
 ];
 waInstance.sendContactMessage(number, params);
 
-// example - send a contact message 
+// eg - send a contact message 
 waInstance.sendInteractiveMessage(number, params);
 ```
 
