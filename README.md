@@ -41,6 +41,9 @@ Available methods:
 const message = 'Hello from WA Easy API';
 waInstance.sendTextMessage(number, message);
 
+```
+
+```js
 // example - send an approved WhatsApp template
 const template = 'approved_template_name';
 
@@ -60,7 +63,9 @@ const params = {
     ]
   }]
 }
+```
 
+```js
 // if there are no variables in the template 
 // and it's english template, you can keep params = {}
 
