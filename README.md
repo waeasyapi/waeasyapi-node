@@ -77,25 +77,25 @@ waInstance.sendTemplateMessage(number, template, params);
 // eg - send a url message with preview
 waInstance.sendURLMessage(number, url);
 
-// eg - send an audio message via an http / https url
+// eg - send an audio message via a http / https url
 const params = { link: `your_audio_link` };
 waInstance.sendAudioMessage(number, params);
 
-// eg - send an image message via an http / https url
+// eg - send an image message via a http / https url
 const params = { 
   link: `your_image_link`, // required
   caption: `your_image_caption` // optional
 };
 waInstance.sendImageMessage(number, params);
 
-// eg - send a video message via an http / https url
+// eg - send a video message via a http / https url
 const params = { 
   link: `your_video_link`, // required
   caption: `your_video_caption` // optional
 };
 waInstance.sendVideoMessage(number, params);
 
-// eg - send a document message via an http / https url
+// eg - send a document message via a http / https url
 const params = { 
   link: `your_document_link`, // required
   filename: `your_document_name` // optional
