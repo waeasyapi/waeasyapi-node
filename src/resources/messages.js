@@ -25,10 +25,10 @@ module.exports = function (api) {
       return api.post({ url: '/send/url', data: payload }, callback);
     },
     
-    sendTemplateMessage: function sendTemplateMessage(number, template, params, callback) {
+    sendTemplateMessage: function sendTemplateMessage(number, template, params = {}, callback) {
       if (!number) throw new Error(NUMBER_REQUIRED_MSG);
       if (!template) throw new Error(TEMPLATE_REQUIRED_MSG);
-      if (!params || !Object.keys(params)) throw new Error(VALID_PARAMS_REQUIRED_MSG);
+      if (!params) throw new Error(VALID_PARAMS_REQUIRED_MSG);
 
       const payload = { number: number, template: template, params: params };
       return api.post({ url: '/send/template', data: payload }, callback);
@@ -36,7 +36,7 @@ module.exports = function (api) {
 
     sendImageMessage: function sendImageMessage(number, params, callback) {
       if (!number) throw new Error(NUMBER_REQUIRED_MSG);
-      if (!params || !Object.keys(params)) throw new Error(VALID_PARAMS_REQUIRED_MSG);
+      if (!params || !Object.keys(params).length) throw new Error(VALID_PARAMS_REQUIRED_MSG);
 
       const payload = { number: number, params: params };
       return api.post({ url: '/send/image', data: payload }, callback);
@@ -44,7 +44,7 @@ module.exports = function (api) {
 
     sendAudioMessage: function sendAudioMessage(number, params, callback) {
       if (!number) throw new Error(NUMBER_REQUIRED_MSG);
-      if (!params || !Object.keys(params)) throw new Error(VALID_PARAMS_REQUIRED_MSG);
+      if (!params || !Object.keys(params).length) throw new Error(VALID_PARAMS_REQUIRED_MSG);
 
       const payload = { number: number, params: params };
       return api.post({ url: '/send/audio', data: payload }, callback);
@@ -52,7 +52,7 @@ module.exports = function (api) {
 
     sendVideoMessage: function sendVideoMessage(number, params, callback) {
       if (!number) throw new Error(NUMBER_REQUIRED_MSG);
-      if (!params || !Object.keys(params)) throw new Error(VALID_PARAMS_REQUIRED_MSG);
+      if (!params || !Object.keys(params).length) throw new Error(VALID_PARAMS_REQUIRED_MSG);
 
       const payload = { number: number, params: params };
       return api.post({ url: '/send/video', data: payload }, callback);
@@ -60,7 +60,7 @@ module.exports = function (api) {
 
     sendDocumentMessage: function sendDocumentMessage(number, params, callback) {
       if (!number) throw new Error(NUMBER_REQUIRED_MSG);
-      if (!params || !Object.keys(params)) throw new Error(VALID_PARAMS_REQUIRED_MSG);
+      if (!params || !Object.keys(params).length) throw new Error(VALID_PARAMS_REQUIRED_MSG);
 
       const payload = { number: number, params: params };
       return api.post({ url: '/send/document', data: payload }, callback);
@@ -68,7 +68,7 @@ module.exports = function (api) {
 
     sendContactMessage: function sendContactMessage(number, params, callback) {
       if (!number) throw new Error(NUMBER_REQUIRED_MSG);
-      if (!params || !Object.keys(params)) throw new Error(VALID_PARAMS_REQUIRED_MSG);
+      if (!params || !Object.keys(params).length) throw new Error(VALID_PARAMS_REQUIRED_MSG);
 
       const payload = { number: number, params: params };
       return api.post({ url: '/send/contact', data: payload }, callback);
@@ -76,7 +76,7 @@ module.exports = function (api) {
 
     sendLocationMessage: function sendLocationMessage(number, params, callback) {
       if (!number) throw new Error(NUMBER_REQUIRED_MSG);
-      if (!params || !Object.keys(params)) throw new Error(VALID_PARAMS_REQUIRED_MSG);
+      if (!params || !Object.keys(params).length) throw new Error(VALID_PARAMS_REQUIRED_MSG);
 
       const payload = { number: number, params: params };
       return api.post({ url: '/send/location', data: payload }, callback);
@@ -84,7 +84,7 @@ module.exports = function (api) {
 
     sendInteractiveMessage: function sendInteractiveMessage(number, params, callback) {
       if (!number) throw new Error(NUMBER_REQUIRED_MSG);
-      if (!params || !Object.keys(params)) throw new Error(VALID_PARAMS_REQUIRED_MSG);
+      if (!params || !Object.keys(params).length) throw new Error(VALID_PARAMS_REQUIRED_MSG);
 
       const payload = { number: number, params: params };
       return api.post({ url: '/send/interactive', data: payload }, callback);
