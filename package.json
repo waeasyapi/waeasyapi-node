@@ -1,6 +1,6 @@
 {
   "name": "waeasyapi",
-  "version": "1.4.4",
+  "version": "1.4.9",
   "description": "",
   "main": "src/index.js",
   "scripts": {

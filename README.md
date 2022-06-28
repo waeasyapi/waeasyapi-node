@@ -32,7 +32,7 @@ const waInstance = new WAEasyAPI({
 });
 ```
 
-Available methods:
+Available methods (messaging):
 
 ```js
 // number must start with the country's dialing code
@@ -188,6 +188,63 @@ const params = {
   }
 };
 waInstance.sendInteractiveMessage(number, params);
+```
+
+Available methods (profile):
+
+```js
+
+// eg - get your profile photo
+waInstance.getProfilePhoto();
+
+// eg - get your profile about
+waInstance.getProfileAbout();
+
+// eg - get your business profile
+waInstance.getBusinessProfile();
+
+// eg - delete your business photo
+waInstance.deleteProfilePhoto();
+
+// eg - change your profile photo
+// photo = base64 string of image
+waInstance.changeProfilePhoto(photo);
+
+// eg - change your profile about
+const about = 'Hey! I\'m using WA Easy API!';
+waInstance.changeProfileAbout(about);
+
+// eg - change your business profile
+const params = {
+  description: 'Official WhatsApp Business APIs & Messaging Platform',
+  vertical: 'Professional Services',
+  address: 'California, USA',
+  email: 'team@waeasyapi.com',
+  websites: ['https://waeasyapi.com']
+}
+waInstance.changeBusinessProfile(params);
+
+// acceptable business verticals are
+// const verticals = [
+//   'Automotive',
+//   'Beauty, Spa and Salon',
+//   'Clothing and Apparel',
+//   'Education',
+//   'Entertainment',
+//   'Event Planning and Service',
+//   'Finance and Banking',
+//   'Food and Grocery',
+//   'Public Service',
+//   'Hotel and Lodging',
+//   'Medical and Health',
+//   'Non-profit',
+//   'Professional Services',
+//   'Shopping and Retail',
+//   'Travel and Transportation',
+//   'Restaurant',
+//   'Other'
+// ]
+
 ```
 
 Every resource method returns a promise.
