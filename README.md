@@ -68,7 +68,7 @@ const params = {
 }
 
 // if there are no variables in the template 
-// and it's english template, you can keep params = {}
+// and it's english template, you can keep params = {} or leave it
 
 waInstance.sendTemplateMessage(number, template, params);
 ```
