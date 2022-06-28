@@ -109,9 +109,11 @@ waInstance.sendLocationMessage(number, params);
 // eg - send a contact message
 const params = [
   {
-    formatted_name: 'Robin White', // required
-    first_name: 'Robin', // optional
-    last_name: 'White', // optional
+    name: {
+      formatted_name: 'Robin White', // required
+      first_name: 'Robin', // optional
+      last_name: 'White', // optional
+    },
 
     phones: [{ 
       phone: '+18787878787', // required

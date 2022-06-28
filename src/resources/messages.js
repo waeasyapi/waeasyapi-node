@@ -30,7 +30,7 @@ module.exports = function (api) {
       if (!template) throw new Error(TEMPLATE_REQUIRED_MSG);
       if (!params || !Object.keys(params)) throw new Error(VALID_PARAMS_REQUIRED_MSG);
 
-      const payload = { number: number, params: params };
+      const payload = { number: number, template: template, params: params };
       return api.post({ url: '/send/template', data: payload }, callback);
     },
 

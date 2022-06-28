@@ -36,10 +36,7 @@ function getValidHeaders(headers) {
 }
 
 function normalizeError(err) {
-  throw {
-    statusCode: err.statusCode,
-    error: err.error.error
-  };
+  throw err.error;
 }
 
 var API = function () {
