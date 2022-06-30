@@ -273,6 +273,7 @@ waInstance.createTemplate(params);
 
 // eg - delete a template 
 // (note: your might not be able to delete sample templates)
+
 // templateName = name_of_the_template
 waInstance.deleteTemplate(templateName);
 
