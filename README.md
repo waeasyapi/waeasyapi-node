@@ -247,6 +247,39 @@ waInstance.changeBusinessProfile(params);
 
 ```
 
+Available methods (template):
+
+```js
+
+// eg - get your profile photo
+const params = {
+  name: 'template_name',
+  category: 'OTP',
+  language: 'en',
+  components: [
+    { type: 'HEADER', format: 'TEXT', text: 'I am header.' },  // format = TEXT | IMAGE | VIDEO | DOCUMENT
+    { type: 'BODY', text: 'I am body.' },
+    { type: 'FOOTER', text: 'I am footer.' },
+    { 
+      type: 'BUTTONS', 
+      buttons: [ // for quick reply buttons, type = QUICK_REPLY
+        { type: 'PHONE_NUMBER', text: 'Call Us', phone_number: '+18887777877' },
+        { type: 'URL', text: 'Visit Website', url: 'https://waeasyapi.com' },
+      ]
+    },
+  ]
+}
+waInstance.createTemplate(params);
+
+// eg - get your profile about
+// templateName = name_of_the_template
+waInstance.deleteTemplate(templateName);
+
+// eg - get your business profile
+waInstance.getTemplates();
+
+```
+
 Every resource method returns a promise.
 
 ```js

@@ -40,6 +40,7 @@ var WAEasyAPI = function () {
     value: function addResources() {
       Object.assign(this, require('./resources/messages.js')(this.api));
       Object.assign(this, require('./resources/profile.js')(this.api));
+      Object.assign(this, require('./resources/template.js')(this.api));
     }
   }]);
 
