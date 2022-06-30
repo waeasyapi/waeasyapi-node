@@ -251,7 +251,7 @@ Available methods (template):
 
 ```js
 
-// eg - get your profile photo
+// eg - create and submit a WhatsApp template message
 const params = {
   name: 'template_name',
   category: 'OTP',
@@ -271,11 +271,12 @@ const params = {
 }
 waInstance.createTemplate(params);
 
-// eg - get your profile about
+// eg - delete a template 
+// (note: your might not be able to delete sample templates)
 // templateName = name_of_the_template
 waInstance.deleteTemplate(templateName);
 
-// eg - get your business profile
+// eg - get the list of your templates or sync with facebook
 waInstance.getTemplates();
 
 ```
