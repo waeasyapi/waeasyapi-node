@@ -8,7 +8,7 @@ module.exports = function (api) {
   return {
     createTemplate: function createTemplate(params, callback) {
       if (!params || !Object.keys(params).length) throw new Error(PARAMS_REQUIRED_MSG);
-      return api.post({ url: '/template/create', data: params }, params, callback);
+      return api.post({ url: '/template/create', data: params }, callback);
     },
 
     getTemplates: function getTemplates(callback) {
@@ -17,7 +17,7 @@ module.exports = function (api) {
 
     deleteTemplate: function deleteTemplate(template, callback) {
       if (!template) throw new Error(TEMPLATE_REQUIRED_MSG);
-      return api.delete({ url: '/delete/template/'+template }, callback);
+      return api.delete({ url: '/template/delete/'+template }, callback);
     }
   };
 };
