@@ -128,7 +128,7 @@ const params = [
 
     phones: [{ 
       phone: '+18787878787', // required
-      wa_id: '8787878787' // optional
+      wa_id: '18787878787' // optional
     }],
 
     emails: [{ email: 'team@waeasyapi.com' }] // optional
