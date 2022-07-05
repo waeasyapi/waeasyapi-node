@@ -20,7 +20,9 @@ Documentation of WA Easy API's API and their usage is available at <https://waea
 
 ### Basic Usage
 
-Instantiate the waeasyapi instance with `acc_id` & `acc_secret`. You can obtain the keys from the dashboard app ([https://waeasyapi.com/](https://waeasyapi.com/))
+Instantiate the waeasyapi instance with `acc_id` & `acc_secret`.
+
+You can obtain the keys from the dashboard app ([https://waeasyapi.com/](https://waeasyapi.com/)).
 
 ```js
 const WAEasyAPI = require('waeasyapi');
