@@ -6,7 +6,7 @@ Official nodejs library for [WA Easy API](https://waeasyapi.com/).
 
 ### PS: For early access, please write to team@waeasyapi.com (we're trying our best to roll out it asap. Thanks for your patience.)
 
-Read up here for getting started and understanding messages flow with WA Easy API: <https://docs.waeasyapi.com/>
+Read up here for getting started and understanding messages flow with WA Easy API: <https://waeasyapi.com/>
 
 ## Installation
 
@@ -16,11 +16,11 @@ npm i waeasyapi
 
 ## Documentation
 
-Documentation of WA Easy API's API and their usage is available at <https://docs.waeasyapi.com>
+Documentation of WA Easy API's API and their usage is available at <https://waeasyapi.com>
 
 ### Basic Usage
 
-Instantiate the waeasyapi instance with `acc_id` & `acc_secret`. You can obtain the keys from the dashboard app ([https://app.waeasyapi.com/](https://app.waeasyapi.com/))
+Instantiate the waeasyapi instance with `acc_id` & `acc_secret`. You can obtain the keys from the dashboard app ([https://app.waeasyapi.com/](https://waeasyapi.com/))
 
 ```js
 const WAEasyAPI = require('waeasyapi');
