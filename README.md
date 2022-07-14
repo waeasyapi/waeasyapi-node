@@ -206,10 +206,24 @@ Available methods (media):
 // eg - get your uploaded media
 waInstance.getMedia(mediaId);
 
-// eg - get your uploaded media
+// eg - upload your media
 // binaryData - binary_data_stream
 // contentType - media content type (eg: application/pdf, image/jpeg etc)
 waInstance.uploadMedia(binaryData, contentType);
+
+// acceptable content types
+// audio - audio/aac, audio/mp4, audio/amr, audio/mpeg, audio/ogg; codecs=opus 
+// Note: The base audio/ogg type is not supported.
+
+// document - Any valid MIME-type.
+
+// image - image/jpeg, image/png
+
+// sticker - image/webp
+
+// video - video/mp4, video/3gpp
+// Note: Only H.264 video codec and AAC audio codec is supported. 
+// Note: Only videos with a single audio stream are supported.
 
 ```
 
