@@ -212,6 +212,7 @@ waInstance.getMedia(mediaId);
 waInstance.uploadMedia(binaryData, contentType);
 
 // acceptable content types
+
 // audio - audio/aac, audio/mp4, audio/amr, audio/mpeg, audio/ogg; codecs=opus 
 // Note: The base audio/ogg type is not supported.
 
