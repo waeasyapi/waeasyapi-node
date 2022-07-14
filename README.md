@@ -80,29 +80,35 @@ waInstance.sendTemplateMessage(number, template, params);
 waInstance.sendURLMessage(number, url);
 
 // eg - send an audio message via a http / https url
-const params = { link: `your_audio_link` };
+const params = { link: `your_audio_link` }; // or id: 'uploaded_media_id' - required
 waInstance.sendAudioMessage(number, params);
 
 // eg - send an image message via a http / https url
 const params = { 
-  link: `your_image_link`, // required
+  link: `your_image_link`, // or id: 'uploaded_media_id' - required
   caption: `your_image_caption` // optional
 };
 waInstance.sendImageMessage(number, params);
 
 // eg - send a video message via a http / https url
 const params = { 
-  link: `your_video_link`, // required
+  link: `your_video_link`, // or id: 'uploaded_media_id' - required
   caption: `your_video_caption` // optional
 };
 waInstance.sendVideoMessage(number, params);
 
 // eg - send a document message via a http / https url
 const params = { 
-  link: `your_document_link`, // required
+  link: `your_document_link`, // or id: 'uploaded_media_id' - required
   filename: `your_document_name` // optional
 };
 waInstance.sendDocumentMessage(number, params);
+
+// eg - send a sticker message via a http / https url
+const params = { 
+  id: `uploaded_media_id`, // required - must be uploaded before sending
+};
+waInstance.sendStickerMessage(number, params);
 ```
 
 ```js
@@ -190,6 +196,21 @@ const params = {
   }
 };
 waInstance.sendInteractiveMessage(number, params);
+
+```
+
+Available methods (media):
+
+```js
+
+// eg - get your uploaded media
+waInstance.getMedia(mediaId);
+
+// eg - get your uploaded media
+// binaryData - binary_data_stream
+// contentType - media content type (eg: application/pdf, image/jpeg etc)
+waInstance.uploadMedia(binaryData, contentType);
+
 ```
 
 Available methods (profile):

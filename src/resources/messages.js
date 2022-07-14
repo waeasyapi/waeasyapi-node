@@ -14,7 +14,7 @@ module.exports = function (api) {
       if (!message) throw new Error(MESSAGE_REQUIRED_MSG);
 
       const payload = { number: number, message: message, previewURL: previewURL };
-      return api.post({ url: '/send/message', data: payload }, callback);
+      return api.post({ url: '/send/text', data: payload }, callback);
     },
 
     sendURLMessage: function sendURLMessage(number, url, callback) {
@@ -66,12 +66,20 @@ module.exports = function (api) {
       return api.post({ url: '/send/document', data: payload }, callback);
     },
 
+    sendStickerMessage: function sendStickerMessage(number, params, callback) {
+      if (!number) throw new Error(NUMBER_REQUIRED_MSG);
+      if (!params || !Object.keys(params).length) throw new Error(VALID_PARAMS_REQUIRED_MSG);
+
+      const payload = { number: number, params: params };
+      return api.post({ url: '/send/sticker', data: payload }, callback);
+    },
+
     sendContactMessage: function sendContactMessage(number, params, callback) {
       if (!number) throw new Error(NUMBER_REQUIRED_MSG);
       if (!params || !Object.keys(params).length) throw new Error(VALID_PARAMS_REQUIRED_MSG);
 
       const payload = { number: number, params: params };
-      return api.post({ url: '/send/contact', data: payload }, callback);
+      return api.post({ url: '/send/contacts', data: payload }, callback);
     },
 
     sendLocationMessage: function sendLocationMessage(number, params, callback) {
