@@ -207,9 +207,9 @@ Available methods (media):
 waInstance.getMedia(mediaId);
 
 // eg - upload your media
-// binaryData - binary_data_stream
-// contentType - media content type (eg: application/pdf, image/jpeg etc)
-waInstance.uploadMedia(binaryData, contentType);
+// send a post (`multipart/form-data`) request with the media on `file` key to
+// basic auth is acceptable with acc_id as username & acc_secret as password
+// https://api.waeasyapi.com/v1/media/upload
 
 // acceptable content types
 
